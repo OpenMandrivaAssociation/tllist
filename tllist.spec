@@ -22,7 +22,7 @@ as well as aggregated ones such as structs, enums and unions.
 Summary:        Development files for %{name}
 Provides:       %{name}-static = %{version}-%{release}
 
-%description
+%description devel
 Devel packages fpr Tllist.
 
 %prep
