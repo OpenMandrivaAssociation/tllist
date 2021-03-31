@@ -1,6 +1,8 @@
 # this is a header-only library with architecture-dependent .pc file
 %global debug_package %{nil}
 
+%define devname %mklibname -d %{name}
+
 Name:           tllist
 Version:        1.0.5
 Release:        1
@@ -18,11 +20,11 @@ pre-processor macros to implement dynamic types, where the data carrier
 is typed to whatever you want; both primitive data types are supported
 as well as aggregated ones such as structs, enums and unions.
 
-%package        devel
+%package -n %{devname}
 Summary:        Development files for %{name}
 Provides:       %{name}-static = %{version}-%{release}
 
-%description devel
+%description -n %{devname}
 Devel packages fpr Tllist.
 
 %prep
@@ -32,13 +34,12 @@ Devel packages fpr Tllist.
 %meson
 %meson_build
 
-
 %install
 %meson_install
 # license will be installed to correct location with rpm macros
 rm -f %{buildroot}%{_docdir}/%{name}/LICENSE
 
-%files devel
+%files -n %{devname}
 %license LICENSE
 %{_includedir}/%{name}.h
 %{_libdir}/pkgconfig/%{name}.pc
