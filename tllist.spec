@@ -5,7 +5,7 @@
 
 Name:           tllist
 Version:        1.0.5
-Release:        1
+Release:        2
 Summary:        C header file only implementation of a typed linked list
 
 License:        MIT
