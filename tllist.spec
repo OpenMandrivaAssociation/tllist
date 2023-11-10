@@ -4,8 +4,8 @@
 %define devname %mklibname -d %{name}
 
 Name:           tllist
-Version:        1.0.5
-Release:        2
+Version:        1.1.0
+Release:        1
 Summary:        C header file only implementation of a typed linked list
 
 License:        MIT
